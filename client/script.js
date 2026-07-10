@@ -7,7 +7,7 @@ const configureClient = async () => {
     domain: 'dev-141ht5cx5e63t36p.us.auth0.com',
     clientId: 'CQ6a6FHrssEDvF5ogZEXyPGWeNNEn3Sv',
     authorizationParams: { 
-      redirect_uri: 'http://127.0.0.1:5500/client/index.html',
+      redirect_uri: 'https://coaster-trip-planner.onrender.com',
       audience: 'https://coaster-planner-api'
     },
   });
