@@ -42,10 +42,11 @@ window.onload = async () => {
   document.getElementById("btn-signup").addEventListener("click", () => auth0Client.loginWithRedirect({
     authorizationParams: { screen_hint: 'signup' }
   }));
+
 document.getElementById("btn-logout").addEventListener("click", () => {
   auth0Client.logout({
     logoutParams: { 
-      returnTo: window.location.origin + "/client/index.html" 
+      returnTo: window.location.origin 
     }
   });
 });
@@ -94,7 +95,7 @@ const fetchMyTrips = async () => {
     });
 
     } catch (error) {
-      alert(`Fetch failed: ${error}`);
+      console.log(`Fetch failed: ${error}`);
     }
 };
 
