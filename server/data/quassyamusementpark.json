@@ -1,0 +1,7 @@
+{
+    "name" : "Quassy Amusement Park",
+    "days" : 0.5,
+    "lat" : 41.527,
+    "long" : -73.151,
+    "nearby" : ["Six Flags New England" , "Playland Park", "Lake Compounce"]
+}

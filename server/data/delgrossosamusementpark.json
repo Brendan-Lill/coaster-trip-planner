@@ -1,0 +1,7 @@
+{
+    "name" : "DelGrosso's Amusement Park",
+    "days" : 0.5,
+    "lat" : 40.631,
+    "long" : -78.291,
+    "nearby" : ["Lakemont Park", "Hersheypark", "Idlewild"]
+}

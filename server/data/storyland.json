@@ -1,0 +1,7 @@
+{
+    "name" : "Story Land",
+    "days" : 0.5,
+    "lat" : 44.117,
+    "long" : -71.182,
+    "nearby" : ["Santa's Village Jefferson" , "Funtown Splashtown USA", "Palace Playland"]
+}

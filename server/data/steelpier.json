@@ -1,0 +1,7 @@
+{
+    "name" : "Steel Pier",
+    "days" : 0.5,
+    "lat" : 39.357,
+    "long" : -74.419,
+    "nearby" : ["Playland's Castaway Cove", "Casino Pier", "Storybook Land"]
+}

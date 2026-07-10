@@ -1,0 +1,7 @@
+{
+    "name" : "Legoland New York",
+    "days" : 0.5,
+    "lat" : 41.380,
+    "long" : -74.315,
+    "nearby" : ["Quassy Amusement Park" , "Playland Park", "Nickelodeon Universe New Jersey"]
+}

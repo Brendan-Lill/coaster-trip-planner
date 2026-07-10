@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roller Coaster Trip Planner</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+      <div id="view-loading">Loading...</div>
+<div id="view-error" hidden></div>
+
+<div style = "text-align: right;" id="view-authenticated" hidden>
+  <p>Logged in as <span id="user-email"></span></p>
+  <pre id="user-profile"></pre>
+  <button id="btn-logout">Logout</button>
+</div>
+
+<div style = "text-align: right;" id="view-unauthenticated" hidden>
+  <button id="btn-signup">Signup</button>
+  <button id="btn-login">Login</button>
+</div>
+
+    <h1>Roller Coaster Trip Planner</h1>
+    <input type="text" placeholder="Search Parks..." id = "parkSearch">
+    <button id = "addBtn">Add a Park</button>
+    
+    <label for="daySelect">Days:</label>
+    <select id="daySelect" name="days">
+    <option value="">--Select Number of Days--</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    </select>
+
+    <button id = "createBtn">Create My Trip</button>
+    <button id = "resetBtn" type = "reset">Reset Trip</button>
+
+    <div id="directions">
+    <div id="map"></div>
+    
+    <div id = "steps"> </div>
+    <button style="visibility: hidden;" id = "saveBtn">Save Trip</button>
+    <div id = "suggest"></div>
+    </div>
+    <select id="savedDrop">
+      <option value="">-- Select a Saved Trip --</option>
+    </select>
+
+
+</body>
+   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/2.18/auth0-spa-js.production.js"></script>
+    <script src="script.js"></script>
+</html>

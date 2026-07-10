@@ -1,0 +1,7 @@
+{
+    "name" : "Six Flags New England",
+    "days" : 1,
+    "lat" : 41.640,
+    "long" : -72.923,
+    "nearby" : ["Lake Compounce" , "Canobie Lake Park", "Quassy Amusement Park"]
+}

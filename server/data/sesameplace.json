@@ -1,0 +1,7 @@
+{
+    "name" : "Sesame Place",
+    "days" : 0.5,
+    "lat" : 40.186,
+    "long" : -74.873,
+    "nearby" : ["Dorney Park", "Clementon Park", "Six Flags Great Adventure"]
+}

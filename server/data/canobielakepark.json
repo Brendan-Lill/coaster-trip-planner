@@ -1,0 +1,7 @@
+{
+    "name" : "Canobie Lake Park",
+    "days" : 0.5,
+    "lat" : 42.794,
+    "long" : -71.250,
+    "nearby" : ["Six Flags New England" , "Palace Playland", "Funtown Splashtown USA"]
+}

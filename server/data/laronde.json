@@ -1,0 +1,7 @@
+{
+    "name" : "La Ronde",
+    "days" : 1,
+    "lat" : 45.522,
+    "long" : -73.534,
+    "nearby" : ["Pays des Merveilles" , "Mega Parc", "Santa's Village Jefferson"]
+}

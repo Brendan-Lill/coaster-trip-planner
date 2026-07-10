@@ -1,0 +1,7 @@
+{
+    "name" : "Seabreeze",
+    "days" : 0.5,
+    "lat" : 43.233,
+    "long" : -77.542,
+    "nearby" : ["Canada's Wonderland" , "Waldameer", "Six Flags Darien Lake"]
+}

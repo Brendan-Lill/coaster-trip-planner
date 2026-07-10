@@ -1,0 +1,7 @@
+{
+    "name" : "Lake Compounce",
+    "days" : 1,
+    "lat" : 41.640,
+    "long" : -72.923,
+    "nearby" : ["Six Flags New England" , "Playland Park", "Quassy Amusement Park"]
+}

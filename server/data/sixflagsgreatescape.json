@@ -1,0 +1,7 @@
+{
+    "name" : "Six Flags Great Escape",
+    "days" : 1,
+    "lat" : 43.350,
+    "long" : -73.689,
+    "nearby" : ["Six Flags New England" , "Quassy Amusement Park", "Lake Compounce"]
+}

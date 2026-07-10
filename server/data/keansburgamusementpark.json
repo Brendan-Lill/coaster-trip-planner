@@ -1,0 +1,7 @@
+{
+    "name" : "Keansburg Amusement Park",
+    "days" : 0.5,
+    "lat" : 40.456,
+    "long" :-74.135,
+    "nearby" : ["Six Flags Great Adventure", "Deno's Wonder Wheel Amusement Park", "Luna Park"]
+}

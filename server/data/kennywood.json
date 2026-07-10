@@ -1,0 +1,7 @@
+{
+    "name" : "Kennywood",
+    "days" : 1,
+    "lat" : 40.387, 
+    "long" : -79.863,
+    "nearby" : ["Lakemont Park", "DelGrossos's Amusement Park", "Idlewild"]
+}

@@ -1,0 +1,7 @@
+{
+    "name" : "Six Flags Great Adventure",
+    "days" : 1.5,
+    "lat" : 40.136,
+    "long" : -74.440,
+    "nearby" : ["Sesame Place", "Casino Pier", "Clementon Park"]
+}

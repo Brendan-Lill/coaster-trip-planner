@@ -1,0 +1,7 @@
+{
+    "name" : "Palace Playland",
+    "days" : 0.5,
+    "lat" : 43.515,
+    "long" : -70.375,
+    "nearby" : ["Story Land" , "Canobie Lake Park", "Funtown Splashtown USA"]
+}

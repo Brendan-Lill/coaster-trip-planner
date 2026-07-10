@@ -1,0 +1,7 @@
+{
+    "name" : "Deno's Wonder Wheel Amusement Park",
+    "days" : 0.5,
+    "lat" : 40.574,
+    "long" : -73.979,
+    "nearby" : ["Luna Park" , "Adventureland Long Island", "Nickelodeon Universe New Jersey"]
+}

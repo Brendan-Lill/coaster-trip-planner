@@ -1,0 +1,7 @@
+{
+    "name" : "Dorney Park",
+    "days" : 1,
+    "lat" : 40.578,
+    "long" : -75.533,
+    "nearby" : ["Sesame Place", "Knoebels", "Six Flags Great Adventure"]
+}

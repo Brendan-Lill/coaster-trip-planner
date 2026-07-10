@@ -1,0 +1,7 @@
+{
+    "name" : "Hersheypark",
+    "days" : 2,
+    "lat" : 40.288,
+    "long" : -76.657,
+    "nearby" : ["Dutch Wonderland", "Knoebels", "Dorney Park"]
+}

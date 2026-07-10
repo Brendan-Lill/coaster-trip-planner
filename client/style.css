@@ -1,0 +1,66 @@
+body{
+    background-color:#3b4954;
+}
+
+label{
+    color:white;
+}
+
+h1{
+    font-family: Helvetica;
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#map {
+    height: 500px;
+    width: 40%;
+}
+
+#btn-signup{
+    border: none;
+    background-color:#3b4954;
+    align-self: right;
+    font-family: Helvetica;
+    size: 20px;
+    color: white;
+}
+
+#btn-login{
+    border: none;
+    background-color:#3b4954;
+    align-self: right;
+    font-family: Helvetica;
+    size: 20px;
+    color: white;
+}
+
+p, h4{
+    color:white;
+    font-family: Helvetica;
+}
+
+#directions{
+    display: flex;
+}
+
+#steps{
+     transform: translateX(5px);
+}
+
+#suggest{
+     transform: translateX(45px);
+}
+
+#saveBtn{
+    width: 100px;
+    height: 30px;
+}
+
+#savedDrop{
+    width: 200px;
+    height: 50px;
+}

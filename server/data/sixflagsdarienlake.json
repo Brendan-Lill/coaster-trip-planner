@@ -1,0 +1,7 @@
+{
+    "name" : "Six Flags Darien Lake",
+    "days" : 1,
+    "lat" : 42.928,
+    "long" : -78.385,
+    "nearby" : ["Canada's Wonderland" , "Waldameer", "Seabreeze"]
+}
