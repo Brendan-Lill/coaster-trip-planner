@@ -1,3 +1,5 @@
+// Auth0 Setup
+
 let auth0Client = null;
 
 const configureClient = async () => {
@@ -51,10 +53,6 @@ document.getElementById("btn-logout").addEventListener("click", () => {
   await updateUI().then(fetchMyTrips());
 };
 
-/////////////////////
-
-
-
 let coorArr = [];
 let nameArr = [];
 let daysArr = [];
@@ -64,93 +62,96 @@ let saveString;
 
 const map = L.map('map').setView([40, -95], 4);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
+  attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
 let daySelect = document.getElementById("daySelect");
 let parkSearch = document.getElementById("parkSearch");
 let steps = document.getElementById("steps");
 let suggest = document.getElementById("suggest");
-
 let creatBtn = document.getElementById("createBtn");
 let addBtn = document.getElementById("addBtn");
 let resetBtn = document.getElementById("resetBtn");
 
+// Fetches all of the users saved trips and puts them in the dropdown
 const fetchMyTrips = async () => {
-    try {
-        const token = await auth0Client.getTokenSilently();
-        const response = await fetch("http://localhost:3000/api/trips", {
-            headers: { "Authorization": `Bearer ${token}` }
-        });
+  try {
+    const token = await auth0Client.getTokenSilently();
+    const response = await fetch("http://localhost:3000/api/trips", {
+        headers: { "Authorization": `Bearer ${token}` }
+      });
 
-        const trips = await response.json();
-        const dropdown = document.getElementById("savedDrop");
+    const trips = await response.json();
+    const dropdown = document.getElementById("savedDrop");
         
-        dropdown.innerHTML = '<option value="">-- Select a Saved Trip --</option>';
+    dropdown.innerHTML = '<option value="">-- Select a Saved Trip --</option>';
 
-        trips.forEach((trip, index) => {
-            const option = document.createElement("option");
-            option.value = trip.trip_data; // Store the HTML string here
-            option.textContent = `Saved Trip ${index + 1}`;
-            dropdown.appendChild(option);
-        });
+    trips.forEach((trip, index) => {
+      const option = document.createElement("option");
+      option.value = trip.trip_data;
+      option.textContent = `Saved Trip ${index + 1}`;
+      dropdown.appendChild(option);
+    });
+
     } catch (error) {
-        alert(`Fetch failed: ${error}`);
+      alert(`Fetch failed: ${error}`);
     }
 };
 
+// Replaces the steps with the steps of a saved trip
 document.getElementById("savedDrop").addEventListener("change", (event) => {
-    const selectedHTML = event.target.value;
+  const selectedHTML = event.target.value;
     
-    if (selectedHTML) {
-        steps.innerHTML = selectedHTML;
-    } else {
-        steps.innerHTML = ""; 
-    }
+  if (selectedHTML) {
+    steps.innerHTML = selectedHTML;
+  } else {
+      steps.innerHTML = ""; 
+  }
 });
 
+// Adds park pins to the map and fills in all information into arrays to be used later
 addBtn.addEventListener("click", () => {
   let park = parkSearch.value;
   park = park.replace(/\s/g, '');
   park = park.replace(/[^a-zA-Z0-9 ]/g, "");
   park = park.toLowerCase();
   getData(park).then((data) => {
-    parkSearch.value = "";
-    const name = String(data.name);
-    const days = Number(data.days);
-    const lat = Number(data.lat);
-    const long = Number(data.long);
-    const nearby = data.nearby;
-    nearArr.push(...nearby);
-    coorArr.push(lat);
-    coorArr.push(long);
-    nameArr.push(name);
-    daysArr.push(days);
-    L.marker([lat, long]).addTo(map).bindPopup(name).openPopup();
+  parkSearch.value = "";
+  const name = String(data.name);
+  const days = Number(data.days);
+  const lat = Number(data.lat);
+  const long = Number(data.long);
+  const nearby = data.nearby;
+  nearArr.push(...nearby);
+  coorArr.push(lat);
+  coorArr.push(long);
+  nameArr.push(name);
+  daysArr.push(days);
+  L.marker([lat, long]).addTo(map).bindPopup(name).openPopup();
     })
-    .catch((error) => {
-      console.error("An error occurred:", error);
-    });
-
+  .catch((error) => {
+    console.error("An error occurred:", error);
+  });
 });
 
+// Takes in the name of a park and returns the corresponding JSON
 async function getData(info) {
-    try {
-        const response = await fetch(
-            `http://localhost:3000/api/data/${info}`
-        );
+  try {
+    const response = await fetch(
+      `http://localhost:3000/api/data/${info}`
+    );
 
-        if (!response.ok) {
-            window.alert("Park not found");
-            return;
-        }
+    if (!response.ok) {
+      window.alert("Park not found");
+        return;
+      }
 
-        const data = await response.json();
-        return data;
+    const data = await response.json();
+    return data;
 
-    } catch (err) {
-        window.alert("Network error: " + err.message);
-    }
+  } catch (err) {
+    window.alert("Network error: " + err.message);
+  }
 }
 
 resetBtn.addEventListener("click", () => {
@@ -183,7 +184,7 @@ if(tripCreated){
 }
 
 tripCreated = true;
-
+// Estimates 16 active hours per day
 let maxHours = maxDays * 16;
 let totalHours = dayCount * 16
 
@@ -191,74 +192,69 @@ let currentLat = coorArr[0];
 let currentLong = coorArr[1];
 steps.insertAdjacentHTML("beforeend", `<h4>${nameArr[0]}: ${String(daysArr[0])} Day(s)</h4>`);
 
+// Creates a route by repeatedly finding the nearest park
 const visited = new Array(coorArr.length / 2).fill(false);
 visited[0] = true;
 
 for (let step = 1; step < coorArr.length / 2; step++) {
 
-    let minDist = Infinity;
-    let minIndex = -1;
+  let minDist = Infinity;
+  let minIndex = -1;
 
-    for (let n = 0; n < coorArr.length; n += 2) {
+  for (let n = 0; n < coorArr.length; n += 2) {
 
-        const pointIndex = n / 2;
+    const pointIndex = n / 2;
 
-        if (visited[pointIndex]) continue;
+    if (visited[pointIndex]) continue;
 
-        const dist = map.distance(
-            [currentLat, currentLong],
-            [coorArr[n], coorArr[n + 1]]
-        );
+      const dist = map.distance([currentLat, currentLong], [coorArr[n], coorArr[n + 1]]);
+      if (dist < minDist) {
+        minDist = dist;
+        minIndex = n;
+      }
+  }
 
-        if (dist < minDist) {
-            minDist = dist;
-            minIndex = n;
-        }
-    }
-
-    const nextLat = coorArr[minIndex];
-    const nextLong = coorArr[minIndex + 1];
-    const currentPark = nameArr[minIndex / 2];
-    const currentDays = daysArr[minIndex / 2];
+  const nextLat = coorArr[minIndex];
+  const nextLong = coorArr[minIndex + 1];
+  const currentPark = nameArr[minIndex / 2];
+  const currentDays = daysArr[minIndex / 2];
 
 
 await new Promise((resolve) => {
 
-    let routingControl = L.Routing.control({
-        waypoints: [
-            L.latLng(currentLat, currentLong),
-            L.latLng(nextLat, nextLong)
-        ],
-        show: false,
-        addWaypoints: false,
-        draggableWaypoints: false,
-        routeWhileDragging: false,
-        createMarker: () => null
-    }).addTo(map);
+  let routingControl = L.Routing.control({
+    waypoints: [
+      L.latLng(currentLat, currentLong),
+      L.latLng(nextLat, nextLong)
+      ],
+      show: false,
+      addWaypoints: false,
+      draggableWaypoints: false,
+      routeWhileDragging: false,
+      createMarker: () => null
+  }).addTo(map);
 
-    routingControl.on("routesfound", function(e) {
+  routingControl.on("routesfound", function(e) {
 
-        let routes = e.routes;
-        let summary = routes[0].summary;
+  let routes = e.routes;
+  let summary = routes[0].summary;
 
-        let totalSeconds = summary.totalTime;
-        let drivingMinutes = Math.round(totalSeconds / 60);
+  let totalSeconds = summary.totalTime;
+  let drivingMinutes = Math.round(totalSeconds / 60);
 
-        totalHours += drivingMinutes / 60;
+  totalHours += drivingMinutes / 60;
 
-        steps.insertAdjacentHTML("beforeend", `
-            <h4>Drive ${Math.floor(drivingMinutes/60)} Hours ${Math.floor(drivingMinutes%60)} Minutes</h4>
-            <h4>Visit ${currentPark} for ${currentDays} Day(s)</h4>
-        `);
-
-        resolve();
-    });
-
+  steps.insertAdjacentHTML("beforeend", `
+    <h4>Drive ${Math.floor(drivingMinutes/60)} Hours ${Math.floor(drivingMinutes%60)} Minutes</h4>
+    <h4>Visit ${currentPark} for ${currentDays} Day(s)</h4>
+  `);
+  resolve();
+  });
 });
-    visited[minIndex / 2] = true;
+  visited[minIndex / 2] = true;
 
-    currentLat = nextLat;
-    currentLong = nextLong;
+  currentLat = nextLat;
+  currentLong = nextLong;
 
 }
   if (totalHours > maxHours){
@@ -268,6 +264,7 @@ await new Promise((resolve) => {
     steps.insertAdjacentHTML("beforeend", `<h4>${Math.floor((maxHours - totalHours) / 16)} Day(s) Remaining</h4>`);
   }
 
+  // Uses a map to find the most frequent nearby parks and suggests them
   let parkMap = new Map();
 
   for(let n = 0; n < nearArr.length; n++){
@@ -288,7 +285,7 @@ await new Promise((resolve) => {
   saveBtn.style.visibility = "visible";
 });
 
-
+// Gives the saveString from the trip to the backend using Auth0
 saveBtn.addEventListener('click', async() => {
   try {
     const token = await auth0Client.getTokenSilently();
@@ -300,7 +297,7 @@ saveBtn.addEventListener('click', async() => {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        tripHTML: saveString
+      tripHTML: saveString
       })
     });
 
@@ -314,5 +311,4 @@ saveBtn.addEventListener('click', async() => {
   } catch (error) {
     alert(`Error saving trip: ${error}`);
   }
-
   });
