@@ -77,7 +77,7 @@ let resetBtn = document.getElementById("resetBtn");
 const fetchMyTrips = async () => {
   try {
     const token = await auth0Client.getTokenSilently();
-    const response = await fetch("http://localhost:3000/api/trips", {
+    const response = await fetch("https://roller-coaster-trip-planner-server.onrender.com/api/trips", {
         headers: { "Authorization": `Bearer ${token}` }
       });
 
@@ -138,7 +138,7 @@ addBtn.addEventListener("click", () => {
 async function getData(info) {
   try {
     const response = await fetch(
-      `http://localhost:3000/api/data/${info}`
+      `https://roller-coaster-trip-planner-server.onrender.com/api/data/${info}`
     );
 
     if (!response.ok) {
@@ -290,7 +290,7 @@ saveBtn.addEventListener('click', async() => {
   try {
     const token = await auth0Client.getTokenSilently();
 
-    const response = await fetch("http://localhost:3000/api/trips", {
+    const response = await fetch("https://roller-coaster-trip-planner-server.onrender.com/api/trips", {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${token}`,
