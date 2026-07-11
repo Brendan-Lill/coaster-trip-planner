@@ -64,3 +64,18 @@ p, h4{
     width: 200px;
     height: 50px;
 }
+#parkSearch{
+    height: 30px;
+}
+#addBtn{
+    height: 30px;
+}
+#daySelect{
+    height: 30px;
+}
+#createBtn{
+    height: 30px;
+}
+#resetBtn{
+    height: 30px;
+}
