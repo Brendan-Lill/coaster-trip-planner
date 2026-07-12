@@ -313,3 +313,7 @@ saveBtn.addEventListener('click', async() => {
     alert(`Error saving trip: ${error}`);
   }
   });
+
+document.getElementById("instructions").addEventListener("click", () =>{
+  alert("Coming Soon!");
+});
