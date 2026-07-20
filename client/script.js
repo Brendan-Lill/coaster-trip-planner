@@ -314,6 +314,20 @@ saveBtn.addEventListener('click', async() => {
   }
   });
 
+
+const popup = document.getElementById("infoPopup");
+const closeBtn = document.getElementById("closeBtn");
+
 document.getElementById("instructions").addEventListener("click", () =>{
-  alert("Coming Soon!");
+  popup.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+  if (event.target === popup) {
+    popup.style.display = "none";
+  }
 });

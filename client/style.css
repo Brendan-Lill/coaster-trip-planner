@@ -27,6 +27,7 @@ h1{
     font-family: Helvetica;
     size: 20px;
     color: white;
+    cursor: pointer;
 }
 
 #btn-login{
@@ -36,6 +37,7 @@ h1{
     font-family: Helvetica;
     size: 20px;
     color: white;
+    cursor: pointer;
 }
 
 #instructions{
@@ -65,6 +67,7 @@ p, h4{
 #saveBtn{
     width: 100px;
     height: 30px;
+    cursor: pointer;
 }
 
 #savedDrop{
@@ -77,13 +80,47 @@ p, h4{
 }
 #addBtn{
     height: 30px;
+    cursor: pointer;
 }
 #daySelect{
     height: 30px;
 }
 #createBtn{
     height: 30px;
+    cursor: pointer;
 }
 #resetBtn{
     height: 30px;
+    cursor: pointer;
+}
+
+#instructions{
+    cursor: pointer;
+}
+
+.modal { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    z-index: 9999;
+} 
+
+#infoContent { 
+    background-color: #3b4954; 
+    margin: 15% auto; 
+    padding: 20px; 
+    width: 600px; 
+    border-radius: 8px; 
+}
+
+.close-icon {
+  float: right;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  font-family: Helvetica;
 }
