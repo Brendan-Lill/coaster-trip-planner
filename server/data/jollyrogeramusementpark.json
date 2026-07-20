@@ -1,0 +1,7 @@
+{
+    "name" : "Jolly Roger Amusement Park",
+    "days" : 0.5,
+    "lat" : 38.360,
+    "long" : -75.077,
+    "nearby" : ["Trimper's Rides" , "Dutch Wonderland", "Clementon Park"]
+}

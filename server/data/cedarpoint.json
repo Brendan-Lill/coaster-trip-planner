@@ -1,0 +1,7 @@
+{
+    "name" : "Cedar Point",
+    "days" : 2,
+    "lat" : 41.479,
+    "long" : -82.680,
+    "nearby" : ["Kings Island" , "Columbus Zoo and Aquarium", "Waldameer"]
+}

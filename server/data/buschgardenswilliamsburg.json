@@ -1,0 +1,7 @@
+{
+    "name" : "Busch Gardens Williamsburg",
+    "days" : 1,
+    "lat" : 37.237, 
+    "long" : -76.644,
+    "nearby" : ["Kings Dominion" , "Adventure Park USA", "Dutch Wonderland"]
+}

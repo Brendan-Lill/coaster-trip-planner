@@ -1,0 +1,7 @@
+{
+    "name" : "Adventure Park USA",
+    "days" : 0.5,
+    "lat" : 39.380, 
+    "long" : -77.279,
+    "nearby" : ["Hersheypark" , "Dutch Wonderland", "Kings Dominion"]
+}

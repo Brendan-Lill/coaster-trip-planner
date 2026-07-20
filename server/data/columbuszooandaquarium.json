@@ -1,0 +1,7 @@
+{
+    "name" : "Columbus Zoo and Aquarium",
+    "days" : 0.5,
+    "lat" : 40.156,
+    "long" : -83.118,
+    "nearby" : ["Camden Park" , "Kings Island", "Cedar Point"]
+}

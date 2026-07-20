@@ -1,6 +1,6 @@
 {
     "name" : "Canada's Wonderland",
-    "days" : 1.5,
+    "days" : 2,
     "lat" : 43.843,
     "long" : -79.541,
     "nearby" : ["Six Flags Darien Lake" , "Santa's Village Bracebridge", "Seabreeze"]

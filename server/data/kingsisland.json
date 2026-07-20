@@ -1,0 +1,7 @@
+{
+    "name" : "Kings Island",
+    "days" : 2,
+    "lat" : 39.344,
+    "long" : -84.268,
+    "nearby" : ["Camden Park" , "Columbus Zoo and Aquarium", "Kentucky Kingdom"]
+}
