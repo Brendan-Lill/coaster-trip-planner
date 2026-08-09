@@ -1,0 +1,7 @@
+{
+    "name" : "Six Flags Over Georgia",
+    "days" : 1,
+    "lat" : 33.770,
+    "long" : -84.551,
+    "nearby" : ["Alabama Adventure" , "Lake Winnie", "Wild Adventures"]
+}

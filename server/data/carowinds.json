@@ -1,0 +1,7 @@
+{
+    "name" : "Carowinds",
+    "days" : 1,
+    "lat" : 35.105,
+    "long" : -80.939,
+    "nearby" : ["Family Kingdom Amusement Park" , "Dollywood", "Anakeesta"]
+}

@@ -1,0 +1,7 @@
+{
+    "name" : "Dollywood",
+    "days" : 1,
+    "lat" : 35.795,
+    "long" : -83.534,
+    "nearby" : ["Pigeon Forge Racing Coaster" , "Rowdy Bear's Smoky Mountain Snowpark", "Anakeesta"]
+}

@@ -1,0 +1,7 @@
+{
+    "name" : "Pigeon Forge Racing Coaster",
+    "days" : 0.25,
+    "lat" : 35.773,
+    "long" : -83.539,
+    "nearby" : ["Anakeesta" , "Rowdy Bear's Smoky Mountain Snowpark", "Dollywood"]
+}
