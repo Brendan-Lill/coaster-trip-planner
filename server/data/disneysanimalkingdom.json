@@ -1,0 +1,7 @@
+{
+    "name" : "Disney's Animal Kingdom",
+    "days" : 1,
+    "lat" : 28.355,
+    "long" : -81.590,
+    "nearby" : ["Disney's Hollywood Studios" , "Magic Kingdom", "Epcot"]
+}

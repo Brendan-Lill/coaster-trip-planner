@@ -1,0 +1,7 @@
+{
+    "name" : "Seaworld Orlando",
+    "days" : 1,
+    "lat" : 28.413,
+    "long" : -81.462,
+    "nearby" : ["Universal Epic Universe" , "Universal Islands of Adventure", "Fun Spot America"]
+}

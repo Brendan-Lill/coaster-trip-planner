@@ -1,0 +1,7 @@
+{
+    "name" : "Wild Adventures",
+    "days" : 1,
+    "lat" : 30.720,
+    "long" : -83.323,
+    "nearby" : ["Universal Islands of Adventure" , "Universal Studios Florida", "Six Flags Over Georgia"]
+}

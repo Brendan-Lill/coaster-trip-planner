@@ -1,0 +1,7 @@
+{
+    "name" : "Fun Spot America",
+    "days" : 0.5,
+    "lat" : 28.466,
+    "long" : -81.455,
+    "nearby" : ["Universal Studios Florida" , "Universal Islands of Adventure", "Universal Epic Universe"]
+}
