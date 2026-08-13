@@ -1,0 +1,7 @@
+{
+    "name" : "Alabama Adventure",
+    "days" : 1,
+    "lat" : 33.381,
+    "long" : -86.999,
+    "nearby" : ["Tropic Falls Theme Park" , "Six Flags Over Georgia", "Lake Winnie"]
+}

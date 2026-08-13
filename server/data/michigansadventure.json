@@ -1,0 +1,7 @@
+{
+    "name" : "Michigan's Adventure",
+    "days" : 1,
+    "lat" : 43.344,
+    "long" : -86.280,
+    "nearby" : ["Indiana Beach" , "CJ Barrymore's Family Entertainment Center", "Six Flags Great America"]
+}

@@ -1,0 +1,7 @@
+{
+    "name" : "Holiday World",
+    "days" : 1,
+    "lat" : 38.119,
+    "long" : -86.915,
+    "nearby" : ["Beech Bend" , "Kentucky Kingdom", "Kings Island"]
+}

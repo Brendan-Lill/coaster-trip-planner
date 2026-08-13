@@ -1,0 +1,7 @@
+{
+    "name" : "Indiana Beach",
+    "days" : 1,
+    "lat" : 40.788,
+    "long" : -86.770,
+    "nearby" : ["Holiday World" , "Six Flags Great America", "Santa's Village Dundee"]
+}
