@@ -1,0 +1,7 @@
+{
+    "name" : "Six Flags Great America",
+    "days" : 2,
+    "lat" : 42.370,
+    "long" : -87.936,
+    "nearby" : ["Santa's Village Dundee" , "Little Amerricka", "Mt. Olympus"]
+}
