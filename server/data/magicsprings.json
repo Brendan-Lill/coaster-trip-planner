@@ -1,0 +1,7 @@
+{
+    "name" : "Magic Springs",
+    "days" : 0.5,
+    "lat" : 34.520,
+    "long" : -93.0177,
+    "nearby" : ["Silver Dollar City" , "Frontier City", "YesterLand Farm"]
+}

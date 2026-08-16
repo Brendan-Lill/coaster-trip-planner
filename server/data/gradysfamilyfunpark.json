@@ -1,0 +1,7 @@
+{
+    "name" : "Grady's Family Fun Park",
+    "days" : 0.25,
+    "lat" : 43.617,
+    "long" : -89.789,
+    "nearby" : ["Six Flags Great America" , "Indiana Beach", "Santa's Village Dundee"]
+}

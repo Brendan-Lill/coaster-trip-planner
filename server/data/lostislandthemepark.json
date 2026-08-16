@@ -1,0 +1,7 @@
+{
+    "name" : "Lost Island Theme Park",
+    "days" : 1,
+    "lat" : 42.441,
+    "long" : -92.306,
+    "nearby" : ["Valleyfair" , "Arnolds Park", "Adventureland Iowa"]
+}
