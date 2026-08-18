@@ -1,0 +1,7 @@
+{
+    "name" : "Seaworld San Antonio",
+    "days" : 1,
+    "lat" : 29.458,
+    "long" : -98.700,
+    "nearby" : ["Six Flags Fiesta Texas" , "Austin's Park", "Cotaland"]
+}

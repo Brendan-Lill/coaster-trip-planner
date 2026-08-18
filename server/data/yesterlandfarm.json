@@ -1,0 +1,7 @@
+{
+    "name" : "YesterLand Farm",
+    "days" : 0.5,
+    "lat" : 32.569,
+    "long" : -95.826,
+    "nearby" : ["Magic Springs" , "Six Flags Over Texas", "Universal Kids Resort"]
+}

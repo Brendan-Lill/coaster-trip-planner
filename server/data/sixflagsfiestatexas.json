@@ -1,0 +1,7 @@
+{
+    "name" : "Six Flags Fiesta Texas",
+    "days" : 1,
+    "lat" : 29.599,
+    "long" : -98.610,
+    "nearby" : ["Seaworld San Antonio" , "Austin's Park", "Cotaland"]
+}

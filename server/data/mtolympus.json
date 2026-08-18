@@ -1,0 +1,7 @@
+{
+    "name" : "Mt. Olympus",
+    "days" : 1,
+    "lat" : 43.617,
+    "long" : -89.789,
+    "nearby" : ["Six Flags Great America" , "Little Amerricka", "Bay Beach Amusement Park"]
+}

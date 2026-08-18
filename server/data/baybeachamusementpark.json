@@ -1,0 +1,7 @@
+{
+    "name" : "Bay Beach Amusement Park",
+    "days" : 0.25,
+    "lat" : 44.531,
+    "long" : -87.981,
+    "nearby" : ["Six Flags Great America" , "Little Amerricka", "Mt Olympus"]
+}
