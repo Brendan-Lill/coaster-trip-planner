@@ -1,0 +1,7 @@
+{
+    "name" : "Lakeside Amusement Park",
+    "days" : 0.5,
+    "lat" : 39.781,
+    "long" : -105.054,
+    "nearby" : ["Elitch Gardens" , "Glenwood Caverns Adventure Park", "Cliff's Amusement Park"]
+}

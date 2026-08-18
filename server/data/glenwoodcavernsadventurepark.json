@@ -1,0 +1,7 @@
+{
+    "name" : "Glenwood Caverns Adventure Park",
+    "days" : 1,
+    "lat" : 39.554,
+    "long" : -107.333,
+    "nearby" : ["Elitch Gardens" , "Lakeside Amusement Park", "Lagoon"]
+}

@@ -1,0 +1,7 @@
+{
+    "name" : "Wonderland Amusement Park",
+    "days" : 0.5,
+    "lat" : 35.241,
+    "long" : -101.832,
+    "nearby" : ["Cliff's Amusement Park" , "Frontier City", "Western Playland"]
+}

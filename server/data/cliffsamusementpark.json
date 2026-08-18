@@ -1,0 +1,7 @@
+{
+    "name" : "Cliff's Amusement Park",
+    "days" : 0.5,
+    "lat" : 35.143,
+    "long" : -106.589,
+    "nearby" : ["Western Playland" , "Wonderland Amusement Park", "Castles n' Coasters"]
+}
